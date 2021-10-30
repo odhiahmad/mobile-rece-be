@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "0d1ac97a-bd5b-4346-b183-0a8294c56ab7",
+		"name": "BRI RECE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Otp",
+			"item": [
+				{
+					"name": "Otp Verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\" : \"8c1d2aca-c910-426e-8431-f25dce1338e7\",\r\n    \"OtpCode\" : \"41896s4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/otp/verification",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"otp",
+								"verification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Ahmad Solehudin Romdoni\",\n    \"Username\" : \"ahsoromdoni\",\n    \"Password\" : \"kamucantik\",\n    \"PhoneNumber\": 628122454341,\n    \"Email\": \"ahmadsolehduin@gmail.com\",\n    \"BirthPlace\": \"jakarta\",\n    \"BirthDate\": \"1996/09/17\",\n    \"MotherName\": \"Lucy\",\n    \"BankAccount\": 9283142\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users"
+							]
+						},
+						"description": "create user"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"ID\": \"c0fdfd83-5391-48df-87ef-d33917b4d36a\",\n        \"Name\": \"Ahmad Romdoni\",\n        \"PhoneNumber\": 628122454341,\n        \"Email\": \"christian.vergi@gmail.com\",\n        \"BirthPlace\": \"jakarta\",\n        \"BirthDate\": \"1996-09-17T00:00:00Z\",\n        \"MotherName\": \"Lucy\",\n        \"BankAccount\": \"009283142\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/users/edit",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find user by id ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/users/c0fdfd83-5391-48df-87ef-d33917b4d36a",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"users",
+								"c0fdfd83-5391-48df-87ef-d33917b4d36a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Username\": \"vergiananta\",\n    \"Password\": \"password07\",\n    \"UserID\": \"4aa6d14a-e1a6-4a49-ab0b-a4939fa14f9b\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/account",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account"
+							]
+						},
+						"description": "Save Account"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"vergiananta\",\n    \"password\": \"password07\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/account/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get account by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/account/f14bfb27-2580-4a4b-a158-989be63e94af",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"f14bfb27-2580-4a4b-a158-989be63e94af"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "Top up",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjp7ImlkIjoiNzU2YjJlZWQtNTI3Yi00NTcyLThkMzAtMmQ3NTA2NDBjOTc5IiwidXNlcm5hbWUiOiJ2ZXJnaWFuYW50YSIsInBhc3N3b3JkIjoiJDJhJDEwJERKVVlEbnVKYTN5UlkwQXQySExzbk9mZWM3ZWFHMWtxdXBJQmxLWllHaENaQUVxZXhJRzlDIiwiSXNBY3RpdmUiOnRydWUsIlVzZXJJRCI6ImYzYjAxNDZhLTRhOTctNDg0ZS1iNTVkLTcwMjUzZDQ0ZWFiYiIsInVzZXIiOnsiSUQiOiJmM2IwMTQ2YS00YTk3LTQ4NGUtYjU1ZC03MDI1M2Q0NGVhYmIiLCJOaWsiOiIxMjMyMTEyNDE0MiIsIk5hbWUiOiJ2ZXJnaWFuYW50YSIsIlBob25lTnVtYmVyIjo2MjgzMTIxMTQzNDEsIkVtYWlsIjoicm9uYWxkby52ZXJnaUBnbWFpbC5jb20iLCJCaXJ0aFBsYWNlIjoic3VyYWJheWEiLCJCaXJ0aERhdGUiOiIxOTk4LTA5LTE3VDAwOjAwOjAwWiIsIk1vdGhlck5hbWUiOiJMdXlvIiwiQmFua0FjY291bnQiOiIwMDkzMjM0MTE0MiIsIkFjY291bnQiOm51bGwsImNyZWF0ZWRfYXQiOiIyMDIxLTEwLTAxVDEyOjQzOjE1Ljc0MDQxNiswNzowMCIsInVwZGF0ZWRfYXQiOiIyMDIxLTEwLTAxVDEyOjQzOjE1Ljc0MDQxNiswNzowMCIsImRlbGV0ZWRfYXQiOm51bGx9LCJXYWxsZXQiOnsid2FsbGV0X2lkIjoiZTgzOTZkYTAtNmVkZC00NDBjLTgwMjQtNGQ0NzFjZjg1ODUzIiwiQmFsYW5jZSI6MCwiQWNjb3VudElEIjoiNzU2YjJlZWQtNTI3Yi00NTcyLThkMzAtMmQ3NTA2NDBjOTc5IiwiQWNjb3VudCI6bnVsbCwid2FsbGV0X2hpc3RvcnkiOm51bGwsIkNyZWF0ZWRBdCI6IjIwMjEtMTAtMDFUMTI6NDM6MTUuOTQ3ODQzKzA3OjAwIiwiVXBkYXRlZEF0IjoiMjAyMS0xMC0wMVQxMjo0MzoxNS45NDkwNzYrMDc6MDAiLCJEZWxldGVkQXQiOm51bGx9LCJjcmVhdGVkX2F0IjoiMjAyMS0xMC0wMVQxMjo0MzoxNS45MzIwNzYrMDc6MDAiLCJ1cGRhdGVkX2F0IjoiMjAyMS0xMC0wMVQxMjo0MzoxNS45MzIwNzcrMDc6MDAiLCJkZWxldGVkX2F0IjpudWxsfSwiYXV0aG9yaXplZCI6dHJ1ZSwiZXhwIjoxNjMzMDcwNjI4fQ.gL4yIYT0-skJfSRTYPNb-jkb0BeCB3gczETKQ8NdEi0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Amount\":60000,\n    \"UserMerchantId\": \"db92eb1b-6304-4a91-b1f4-4522815145ce\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/wallet/topup/{wallet_id}",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"wallet",
+								"topup",
+								"{wallet_id}"
+							]
+						},
+						"description": "TOP UP"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Wallet by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/wallet/ce39664a-e5b4-46d3-96f9-167eda82df97",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"wallet",
+								"ce39664a-e5b4-46d3-96f9-167eda82df97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Balance\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/wallet/withdraw/ce39664a-e5b4-46d3-96f9-167eda82df97",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"wallet",
+								"withdraw",
+								"ce39664a-e5b4-46d3-96f9-167eda82df97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Merchant",
+			"item": [
+				{
+					"name": "Create User Merchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" : \"Ahmad Solehudin R\",\r\n    \"VaNumber\" : \"0085471632457\",\r\n    \"Balance\" : 80000000,\r\n    \"MerchantID\" : \"d4d9f74d-8bad-406a-a94f-1ba90205c1e9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usermerchants",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usermerchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Merchant By VaNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Merchant",
+			"item": [
+				{
+					"name": "Create Merchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\" : \"Alfamart\",\r\n    \"TypeMerchant\" : \"Offline\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/merchants",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Merchant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/merchants",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"merchants"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "histories wallet",
+			"item": [
+				{
+					"name": "Get all wallet histories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzI4MjYzNTAsInVzZXJfaWQiOiJhZWYwYmUyZi05MDUzLTRmNGUtOTk5ZC04OTY5ZTVhNjIzMTcifQ.NpNIjmpdyKehDfskRX_MTSX6wGZo_EK_Xqo79EECJlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "size",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/histories",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"histories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
